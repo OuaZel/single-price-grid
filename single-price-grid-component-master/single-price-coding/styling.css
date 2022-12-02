@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=Karla");
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: lightgray;
+}
+.container{
+    width: 700px;
+    height: 500px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-areas: 'first-row first-row' 'first-column second-column';
+    font-family: "Karla", sans-serif;
+    border-radius: 10px;
+}
+.first-row{
+    grid-area: first-row;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+}
+.first-column{
+    grid-area: first-column;
+    background-color: #58B4B2;
+    color: white;
+    border-radius: 0 0 0 10px;
+}
+.second-column{
+    grid-area: second-column;
+    background-color: #5EBFBE;
+    color: #97e3eb;
+    border-radius: 0 0 10px 0;
+}
+ul{
+    list-style-type: none;
+    padding-top: 20px;
+}
+.first-row, .first-column, .second-column{
+    padding: 40px;
+}
+.first-row div{
+    padding-bottom: 20px;
+}
+.first-column div{
+    padding-bottom: 15px;
+}
+input{
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    background-color: hsl(71, 73%, 54%);
+    font-size: 16px;
+    border: none;
+}
+.first-row h3{
+    color: #4FA3A7;
+}
+.first-row h4{
+    color: hsl(71, 73%, 54%);
+}
+.first-row p{
+    color: #c1c1ce;
+}
+.first-column h4, .second-column h4{
+    color: #eafefe;
+}
+.price{
+    color: #f8ffff;
+    font-size: 35px;
+}
+.first-column label{
+    padding-left: 10px;
+    vertical-align:super;
+    color: #66ced0;
+    font-size: 16px;
+}
+@media screen and (max-width:500px) {
+    .container{
+        width: 300px;
+        grid-template-areas: 'first-row' 'first-column' 'second-column';
+        margin: 0 auto;
+    }  
+    .first-row{
+        grid-area: first-row;
+    }  
+    .first-column{
+        grid-area: first-column;
+        border-radius: 0 0 0 0;
+    }
+    .second-column{
+        grid-area: second-column;
+        border-bottom-left-radius: 10px;
+    }
+    .first-row h3{
+        font-size: 16px;
+    }
+    .first-row h4{
+        font-size: 14px;
+    }
+    .first-row p{
+        font-size: 14px;
+        line-height: 26px;
+    }
+    .first-row, .first-column, .second-column{
+        padding: 25px;
+    }
+}
